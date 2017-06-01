@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project outputprefix="test">
+	
+	<!--  Project description -->
+	<name>LIGHTS OUT</name>
+	<author>Juraj Kubiš</author>
+	<authoremail>xkubis15@fit.vutbr.com</authoremail>
+	<revision>1.2</revision>
+	<description>Projekt do IVH</description>
+
+	<!--  MCU part -->
+	<mcu>
+	    <file>main.c</file>
+	</mcu>
+
+	<!-- FPGA part -->
+	<fpga architecture="pc" dcmfrequency="25MHz">
+        <include>fpga/ctrls/vga/package.xml</include>
+        <include>fpga/ctrls/keyboard/package.xml</include>
+
+	    <file>top.vhd</file>
+	    <file>cell.vhd</file>
+	    <file>math.vhd</file>
+	    <file>bcd.vhd</file>
+	    <file>idx.vhd</file>
+		<file>char_rom.vhd</file>
+			    
+	</fpga>
+
+</project>
